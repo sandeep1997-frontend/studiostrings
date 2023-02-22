@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
@@ -22,9 +20,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
-const emailI = process.env.EMAIL_KEY
-const recaptcha = process.env.RECAPTCHA_KEY
+const stripe = require('stripe')("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");
+const emailI = "guhydbjrmlchpxez"
+const recaptcha = "6LcwwYEkAAAAAFrHtZru6ZmkoGaHs6OG8Z1z-uHv"
 app.get("/", (req, res) => {
     res.sendFile( __dirname + "/index.html");
 });
@@ -79,7 +77,7 @@ app.get("/transaction-success", async (req, res) => {
     const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
     console.log(`Payment successful for session ${session.id}`);
 
-
+6LcwwYEkAAAAAFrHtZru6ZmkoGaHs6OG8Z1z-uHv
     if (session.payment_status === 'paid') {
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -466,8 +464,8 @@ app.post('/create-checkout-session', async (req, res) => {
             },
         ],
         mode: 'payment',
-        success_url: `${process.env.BASE_URL}/transaction-success?session_id={CHECKOUT_SESSION_ID}&userName=${userData.name}&userEmail=${userData.email}&boughtPacks=${encodeURIComponent(JSON.stringify(boughtPacks))}`,
-        cancel_url: `${process.env.BASE_URL}`,
+        success_url: `${process.env.PORT}/transaction-success?session_id={CHECKOUT_SESSION_ID}&userName=${userData.name}&userEmail=${userData.email}&boughtPacks=${encodeURIComponent(JSON.stringify(boughtPacks))}`,
+        cancel_url: `${process.env.PORT}`,
     });
 
     res.send({url: session.url});
