@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-const stripe = require('stripe')(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);
+const stripe = require('stripe')("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");
 const emailI = "guhydbjrmlchpxez"
 const recaptcha = "6LcwwYEkAAAAAFrHtZru6ZmkoGaHs6OG8Z1z-uHv"
 app.get("/", (req, res) => {
