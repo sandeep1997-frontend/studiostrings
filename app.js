@@ -76,8 +76,6 @@ app.get("/transaction-success", async (req, res) => {
     const {boughtPacks} = req.query;
     const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
     console.log(`Payment successful for session ${session.id}`);
-
-6LcwwYEkAAAAAFrHtZru6ZmkoGaHs6OG8Z1z-uHv
     if (session.payment_status === 'paid') {
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
