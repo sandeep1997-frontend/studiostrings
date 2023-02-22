@@ -474,6 +474,6 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 8080, IP_ADDRESS, () => {
-    console.log("Server is running at " + IP_ADDRESS + ":8080");
+app.listen(process.env.PORT || 8080, () => {
+    console.log("Server is running at " + ":8080");
 });
