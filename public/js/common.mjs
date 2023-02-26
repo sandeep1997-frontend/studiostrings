@@ -182,7 +182,6 @@ function commonFooter() {
   col2.appendChild(service2);
   col2.appendChild(service3);
   col3.appendChild(contact);
-  col3.appendChild(contact1);
   col3.appendChild(contact2);
   row.appendChild(col1);
   row.appendChild(col2);
