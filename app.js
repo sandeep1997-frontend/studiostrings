@@ -105,7 +105,7 @@ app.get("/transaction-success", async (req, res) => {
         let mailOptions = {
             from: 'studiostrings9948@gmail.com',
             to: userEmail,
-            subject: 'Your order on studiostrings.com',
+            subject: 'Your order on studiostrings.shop',
             text: "",
             html: `<h1>Dear ${userName},</h1>
                    <h3>You have purchased the following items: ${boughtPacks}.<br></h3>
@@ -217,7 +217,7 @@ app.post("/contact", (req, res) => {
             let options = {
                 from: "studiostrings9948@gmail.com",
                 to: email,
-                subject: "We're here to help: studiostrings.com contact request update",
+                subject: "We're here to help: studiostrings.shop contact request update",
                 text: "",
                 html: `<table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tbody>
