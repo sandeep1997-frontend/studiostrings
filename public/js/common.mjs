@@ -137,7 +137,7 @@ function commonFooter() {
   contact.textContent = "Contact";
 
   const contact1 = document.createElement("p");
-  contact1.innerHTML = `<i class="bi bi-whatsapp"></i>+91 9398078395`;
+  contact1.innerHTML = `<i class="bi bi-whatsapp"></i>+91 9849383198`;
 
   const contact2 = document.createElement("p");
   contact2.innerHTML = `<i class="bi bi-envelope"></i>studiostrings9948@gmail.com`;
@@ -186,6 +186,7 @@ function commonFooter() {
   col2.appendChild(service3);
   col3.appendChild(contact);
   col3.appendChild(contact2);
+  col3.appendChild(contact1);
   col3.appendChild(contact3);
   row.appendChild(col1);
   row.appendChild(col2);
