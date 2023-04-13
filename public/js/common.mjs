@@ -141,6 +141,9 @@ function commonFooter() {
 
   const contact2 = document.createElement("p");
   contact2.innerHTML = `<i class="bi bi-envelope"></i>studiostrings9948@gmail.com`;
+  
+  const contact3 = document.createElement("p");
+  contact3.innerHTML = `<i class="bi bi-geo"></i>3-150/A, Ambedkar colony, Visakhapatnam, 531163, India`;
 
   const copyRight = document.createElement("div");
   copyRight.classList.add("footer-copyright");
@@ -183,6 +186,7 @@ function commonFooter() {
   col2.appendChild(service3);
   col3.appendChild(contact);
   col3.appendChild(contact2);
+  col3.appendChild(contact3);
   row.appendChild(col1);
   row.appendChild(col2);
   row.appendChild(col3);
