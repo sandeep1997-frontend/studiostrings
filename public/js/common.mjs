@@ -187,7 +187,7 @@ function commonFooter() {
   col3.appendChild(contact);
   col3.appendChild(contact2);
   col3.appendChild(contact1);
-  col3.appendChild(contact3);
+//   col3.appendChild(contact3);
   row.appendChild(col1);
   row.appendChild(col2);
   row.appendChild(col3);
